@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Students</h2>
+
+<form method="POST">
+<input name="name" placeholder="Student Name" class="form-control">
+<button class="btn btn-primary mt-2">Add</button>
+</form>
+
+<ul>
+{% for s in data %}
+<li>{{ s.name }} 
+<a href="/delete_student/{{ s.id }}">Delete</a>
+</li>
+{% endfor %}
+</ul>
+{% endblock %}
+
+<input type="text" id="search" placeholder="Search..." class="form-control mb-2">
+
+<script>
+document.getElementById("search").addEventListener("keyup", function() {
+    let value = this.value.toLowerCase();
+    document.querySelectorAll("li").forEach(li => {
+        li.style.display = li.textContent.toLowerCase().includes(value) ? "" : "none";
+    });
+});
+</script>

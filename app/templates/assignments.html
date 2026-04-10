@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Assignments</h2>
+
+<form method="POST" enctype="multipart/form-data">
+<input name="title" placeholder="Title" class="form-control">
+<input type="file" name="file" class="form-control mt-2">
+<button class="btn btn-warning mt-2">Upload</button>
+</form>
+
+<ul>
+{% for a in data %}
+<li>{{ a.title }} - {{ a.file }}</li>
+{% endfor %}
+</ul>
+{% endblock %}

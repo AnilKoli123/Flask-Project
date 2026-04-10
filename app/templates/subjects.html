@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Subjects</h2>
+
+<form method="POST">
+<input name="name" placeholder="Subject" class="form-control">
+
+<select name="teacher" class="form-control mt-2">
+{% for t in teachers %}
+<option value="{{ t.id }}">{{ t.name }}</option>
+{% endfor %}
+</select>
+
+<button class="btn btn-success mt-2">Add</button>
+</form>
+{% endblock %}

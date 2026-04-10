@@ -1,0 +1,29 @@
+body {
+    font-family: Poppins;
+    background: linear-gradient(135deg,#667eea,#764ba2);
+    color:white;
+}
+.sidebar {
+    width:200px;
+    position:fixed;
+}
+.card {
+    background:rgba(255,255,255,0.1);
+    padding:20px;
+    border-radius:15px;
+}
+button {
+    background:#ff7eb3;
+    border:none;
+    padding:10px;
+}
+.dark {
+    background: #121212;
+    color: white;
+}
+.card {
+    transition: 0.3s;
+}
+.card:hover {
+    transform: scale(1.05);
+}
